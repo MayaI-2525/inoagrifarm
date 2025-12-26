@@ -84,7 +84,7 @@ body {
     bottom: -2px;
     background-image: url(../picture/wave-white.png);
     background-position: bottom;
-    background-size: cover;
+    background-size: contain;
 }
 
 @media(max-width:700px){
@@ -93,6 +93,38 @@ body {
     } */
     .top-chatch{
         flex-grow: 1;
+    }
+    .circle-around {
+    /*    background-color: aqua; */
+        width: 80%;
+        height: auto; /*aspect-ratio用*/
+        aspect-ratio: 1/ 1;
+    }
+    .circle-back {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle-front h1{
+        font-size: 10vw;
+        font-weight: 800;
+    }
+    .circle-front p{
+        font-size: 5vw;
+    }
+    .toppage-wave {
+    /*    background-color: #ffdfdf;*/
+        width: 100%;
+        height: 10vh;
+        position: absolute;
+        bottom: 0;
+        background-image: url(../picture/wave-white.png);
+        background-position: bottom;
+        background-size: contain;
     }
 }
 
@@ -182,16 +214,15 @@ header {
 /*    background-color: turquoise;    */
     display: flex;
     justify-content: space-between;
-    width: 30%;
-    min-width: 170px;
+    width: 50%;
 }
 .nav-left{
     margin-right: 0;  /*mainlogoのwidthと同じ*/
 }
 .link-around {
 /*    background-color: #64C37C;  */
-    width: 100px;
-    height: 80px;
+    max-width: 120px;
+    max-height: 80px;
 }
 .link {
     width: 100%;
@@ -203,12 +234,14 @@ header {
 }
 .link img{
     width: 50%;
+
 }
 .link p{
-    font-size: 1rem;
+    font-size: 2.5vw;
     color: #ff4800;
     font-weight: 500;
     margin: 0;
+    word-wrap: none;
 }
 .mainLogo {
     margin: 0 auto 20px auto;
@@ -216,11 +249,11 @@ header {
     position: relative;
     top: 0;
     width: 40%;
-    min-width: 300px;
+    min-width: 200px;
 }
 
 
-/*ーーーーーーーーーー  サブページレスポンシブ  ーーーーーーーーーー*/
+/*ーーーーーーーーーー  サブページレスポンシブ */
 .subpage-index-nav {
     display: none;
 }
@@ -522,19 +555,15 @@ main {
 
 @media(max-width: 700px){
     .syouhinnsyoukai {
-/*        background-color: aquamarine; */
-        width: 100%;
-        padding: 150px 0 50px 0;
-        margin-bottom: 0;
+        width: 95%;
+        padding: 50px 0 0 0;
+        margin: 0 auto;
     }
-
     .ss-around {
-/*        background-color: antiquewhite; */
         width: 100%;
         height: auto;
         margin: 0 auto;
-        padding: 0 10px;
-
+        padding: 0;
         
         display: inline-block;
         grid-template-columns: 1fr 1fr;
@@ -543,62 +572,56 @@ main {
     }
 
     .ss-box {
-        background-color: #9a9a9a;
-        width: 200px;
-        height: 120px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5/ 1;
         display: block;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        p {
+        display: inline-block;
+        width: auto;
+        height: 100%;
+        padding: 0;
+        /*文字*/
+        font-size: 6vw;
+        font-weight: bold;
+        text-align: left;
+        line-height: 3;
+        word-wrap: normal;
+        /*位置*/
+        position: relative;
+        left: 35%;
+        }
     }
 
     .naebox {
-        background-image: url(../picture/syouhinnnae.jpg) ;
+        background: url(../picture/syouhinnnae.jpg) no-repeat top left/ contain ;
         border-top-left-radius: 0;
         color: #64C37C;
     }
 
     .tomatobox {
-        background-image: url(../picture/syouhinntomato.jpg);
+        background: url(../picture/syouhinntomato.jpg) no-repeat top left/ contain ;
         border-top-right-radius: 0;
         color: #FF0000;
     }
 
     .misobox {
-        background-image: url(../picture/syouhinnmiso.jpg);
+        background: url(../picture/syouhinnmiso.jpg) no-repeat top left/ contain ;
         border-bottom-left-radius: 0;
         color: #FF6F2D;
     }
 
     .komebox {
-        background-image: url(../picture/syouhinnkome.jpg);
+        background: url(../picture/syouhinnkome.jpg) no-repeat top left/ contain ;
         border-bottom-right-radius: 0;
         color: #9F8347;
     }
-    .ss-box p {
-        background-color: rgba(255, 255, 255, 0);
-        display: inline-block;
-        font-size: 40px;
-        font-weight: bold;
-        width: 350px;
-        padding: 0;
-        text-align: left;
-        position: relative;
-        left: 200px;
-
-    }
     .ss-round {
-        background-color: rgba(220, 220, 220, 0);
-        width: 300px;
-        height: 250px;
-        border-radius: 0;
-        position: absolute;
-        transform: translate(none none);
-        /*文字部分*/
-        font-size: 64px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: black;
-        text-decoration: none;
-
+        display: none;
     }
 
 }
@@ -736,7 +759,7 @@ main {
         padding: 0 2%;
     }
     .newslist {
-        padding: 50px 0;
+        padding: 30px 10px;
         border-bottom: 1px solid #C6A254;
     }
     .newslist-bottom {
@@ -749,8 +772,8 @@ main {
 .sns {
     background-color: #FAF5E7;
     width: 100%;
-    padding-top: 80px;
-    padding-bottom: 180px;/*SNS上下pad80+ニュースとのあいだ100*/
+    padding-top: 0;
+    padding-bottom: 50px;/*SNS上下pad80+ニュースとのあいだ100*/
     position: relative;
 }
 .sns h2{
@@ -823,7 +846,8 @@ main {
     }
     .snss-link{
 /*        background-color: #9a9a9a; */
-        width: 180px;
+        width: 50%;
+        max-width: 180px;
         margin: 0 auto;
     }
     .snss-inst-position {
@@ -838,12 +862,13 @@ main {
     }
     .snss-link img {
         display: block;
-        width: 80px;
+        width: 80%;
+        max-width: 80px;
         margin: 0 auto;
     }
     .snss-link p {
         text-align: center;
-        font-size: 18px;
+        font-size: 3vw;
         font-weight: bold;
         color: #000;
         letter-spacing: 5px;
