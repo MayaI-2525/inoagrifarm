@@ -7,6 +7,8 @@
     <!--CSS-->
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+    <!--ファビコン-->
+    <link rel="icon" href="./picture/illust/tomatoillust_sinmetory.png">
     <!--フォント-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,6 +87,42 @@
         <div class="newspage-around">
             <p class="title">最新情報</p>
             <div>
+                <article class="news-box-outside news-other" id="jumpfromtop"> <!--記事更新ここから↓-->
+                    <p class="news-box-ymd">2026/1/1</p>
+                    <div class="news-box-inside">
+                        <div class="news-textbox">
+                            <h3>新年のご挨拶</h3>
+                            <p>
+                                あけましておめでとうございます。<br>
+                                井野農菜園は1/5より、各種対応再開しております。<br>
+                                今年も井野農菜園をよろしくお願いいたします。
+                            </p>
+                        </div>
+                        <div class="news-imgbox">
+                            <img src="picture/newspicture/20260101_1.png">
+                        </div>                        
+                    </div>                    
+                </article>                              <!--記事更新ここまで↑-->
+
+                <article class="news-box-outside news-rice" id="jumpfromtop"> <!--記事更新ここから↓-->
+                    <p class="news-box-ymd">2025/11/9</p>
+                    <div class="news-box-inside manypictures">
+                        <div class="news-textbox no-img">
+                            <h3>米フェス2025参加</h3>
+                            <p>
+                                今年も南小国はいわら体育館にて開催の「南小国米フェス2025」に参加しました。<br>
+                                井野農菜園はこだわりのかけぼし米の提供と販売、トマトみその試食・販売を行いました。<br>                                
+                                米フェスが終了し後日、かけぼし米を買っていただいた方からお礼のお葉書をいただくなど、大盛況にて終了いたしました。<br>
+                                ご来場いただいた皆様に深く感謝申し上げます。
+                            </p>
+                        </div>
+                        <div class="news-imgbox imgbox-pictures">
+                            <img src="picture/newspicture/20251109_1.jpg">
+                            <img src="picture/newspicture/20251109_2.jpg">
+                        </div>                        
+                    </div>                    
+                </article>                              <!--記事更新ここまで↑-->
+
                 <article class="news-box-outside news-tomato" id="jumpfromtop"> <!--記事更新ここから↓-->
                     <p class="news-box-ymd">2025/8/1</p>
                     <div class="news-box-inside">
@@ -196,16 +234,18 @@
         <div class="contactform-around">
             <h2>CONTACT</h2>
             <div class="contactform-links">
-                <a href="#"  class="contactform-google formcustum">
-                    <div>                    
-                        <p>Googleフォーム</p>                        
-                    </div>
-                </a>
-                <a href="mailto:inoagrigarden@gmail.com"  class="contactform-mail formcustum">
-                    <div>
-                        <p>メールにて<br>お問い合わせ</p>
-                    </div>
-                </a>
+                <div class="contactform__linkbox">
+                    <a href="#"  class="contactform-google formcustum">            
+                        <p class="contactform__link_txt">サイトに関する<br>お問い合わせ</p>                  
+                    </a>
+                    <p>Googleフォームを開きます</p>
+                </div>
+                <div class="contactform__linkbox">
+                    <a href="mailto:inoagrigarden@gmail.com"  class="contactform-mail formcustum">
+                        <p>商品・生産者への<br>お問い合わせ</p>
+                    </a>
+                    <p>メールソフトを立ち上げます</p>
+                </div>
             </div>
         </div>
     </div>
@@ -250,8 +290,6 @@
     </div>
     <div class="footerPresents">2025 M.Ino</div>
 </footer>
-
-<div class="pageupper"><p></p></div>
 
 </body>
 

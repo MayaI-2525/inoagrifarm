@@ -7,6 +7,10 @@
     <!--CSS-->
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+    <!--優先読み込み-->
+    <link rel="preload" href="./picture/suke_yoko.jpg" as="image">
+    <!--ファビコン-->
+    <link rel="icon" href="./picture/illust/tomatoillust_sinmetory.png">
     <!--フォント-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,16 +184,18 @@
         <div class="contactform-around">
             <h2>CONTACT</h2>
             <div class="contactform-links">
-                <a href="#"  class="contactform-google formcustum">
-                    <div>                    
-                        <p>Googleフォーム</p>                        
-                    </div>
-                </a>
-                <a href="mailto:inoagrigarden@gmail.com"  class="contactform-mail formcustum">
-                    <div>
-                        <p>メールにて<br>お問い合わせ</p>
-                    </div>
-                </a>
+                <div class="contactform__linkbox">
+                    <a href="#"  class="contactform-google formcustum">            
+                        <p class="contactform__link_txt">サイトに関する<br>お問い合わせ</p>                  
+                    </a>
+                    <p>Googleフォームを開きます</p>
+                </div>
+                <div class="contactform__linkbox">
+                    <a href="mailto:inoagrigarden@gmail.com"  class="contactform-mail formcustum">
+                        <p>商品・生産者への<br>お問い合わせ</p>
+                    </a>
+                    <p>メールソフトを立ち上げます</p>
+                </div>
             </div>
         </div>
     </div>
