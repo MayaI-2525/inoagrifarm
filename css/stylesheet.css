@@ -1403,13 +1403,17 @@ article {
 }
 
 .imgbox-pictures {
+background-color: #64C37C;
+    width: 100%;
+    height: auto;
     margin: 10px 0;
     display: flex;
+    flex-wrap: wrap;
 }
 .imgbox-pictures img {
     margin-right: 20px;
     width: 240px;
-    height: 180px;
+    object-fit: fill;
 }
 
 
@@ -1673,9 +1677,10 @@ article {
 .contactform-around {
     background-color: rgba(255, 255, 255, 0.5);
     width: 70%;
-    height: 40%;
+    height: auto;
     border-radius: 20px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .contactform-around h2{
@@ -1691,29 +1696,47 @@ article {
 }
 
 .contactform-links {
-    /*background-color: aliceblue;*/
     display: flex;
     justify-content: space-around;
-    height: 45%;
+    height: auto;
 }
 
-.formcustum {
-    background-color: white;
-    width: 40%;
+.contactform__linkbox{
+    width: 45%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
+    flex-direction: column;
 
-.formcustum p{
-    font-size: 2vw;
-}
+    >p{
+        padding-top: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
 
+    a{
+        background-color: rgb(255, 255, 255);
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        overflow: hidden;
+        position: relative;
+        /*文字*/
+        text-align: center;
+        color: black;
+        text-decoration: none;
+
+        p{
+            font-size: 2vw;
+        }
+    }
+}
+.contactform-google {
+    border: 1px solid #FF4800;
+}
+.contactform-mail {
+    border: 1px solid #C6A254;
+}
+/*疑似要素装飾*/
 .formcustum::before {
     content: '';
     display: inline-block;
@@ -1734,10 +1757,11 @@ article {
     content: '';
     display: inline-block;
     position: absolute;
-    width: 30px;
-    height: 30px;
-    transform: rotate(45deg);
+    top: 40%;
     right: 10%;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
     border-top: 3px solid #FF4800;
     border-right: 3px solid #ff4800;
 }
@@ -1747,18 +1771,7 @@ article {
     border-right: 3px solid #C6A254;
 }
 
-.contactform-google {
-    border: 1px solid #FF4800;
-}
-#tobecontinued{
-    color: #FF0000;
-    font-weight: bold;
-    font-size: 20px;
-}
 
-.contactform-mail {
-    border: 1px solid #C6A254;
-}
 
 @media(max-width:700px){
     .subpage-back {
@@ -1766,18 +1779,31 @@ article {
         margin: 0;
     }
     .contactform-around {
-        height: 400px;
+        height: auto;
         min-width: 350px;
     }
     .contactform-links {
 /*        background-color: #9F8347;*/
-        height: 300px;
         flex-direction: column;
         align-items: center;
+        display: flex;
+        justify-content: start;
+    }
+    .contactform__linkbox{
+        width: 80%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        a{
+            p{
+                font-size: 3vw;
+            }
+        }
     }
     .formcustum {
         background-color: white;
-        width: 85%;
+        width: 100%;
         height: 100px;
         display: flex;
         justify-content: center;
@@ -1795,10 +1821,6 @@ article {
         font-size: 10vw;
         letter-spacing: 1rem;
     }
-    .formcustum p{
-        font-size: 4vw;
-    }
-
 }
 
 
