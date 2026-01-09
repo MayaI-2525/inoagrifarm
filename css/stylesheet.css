@@ -132,7 +132,8 @@ body {
 header {
 /*    background-color: rgb(187, 126, 126); */
     width: 100%;
-    margin: 50px auto 0 auto;
+    height: 120px;
+    margin: 70px auto 0 auto;
 }
 .index-nav {
 /*    background-color: #FF83DC;  */
@@ -199,6 +200,8 @@ header {
 header {
 /*    background-color: #a7a7a7;  */
     width: 100%;
+    height: auto;
+    margin: 40px auto 0 auto;
     /*位置調整*/
     display: flex;
     flex-direction: column-reverse;
@@ -881,10 +884,11 @@ main {
 /*ーーーーーーーーーーーーーーーサブページ総合CSS*/
 .subpage-wave {
     /*background-color: #64C37C;*/
-    background: url(../picture/wave-yellow.png) no-repeat center bottom/ cover;
+    background: url(../picture/wave-yellow.png) no-repeat center bottom/ contain;
     width: 100%;
     height: 15vh;
-    margin: 0 auto;
+    min-height: 75px;
+    margin: 0;
 }
 
 .subpage-back {
@@ -1333,16 +1337,15 @@ details {
 .newspage-around {
     /*border: 1px solid pink;*/
     width: 70%;
+    min-width: 680px;
     margin: 0 auto;
     padding-bottom: 150px;
 }
-
 article {
     background-color: rgba(255, 255, 255, 0.5);
     margin-top: 20px;
     margin-bottom: 50px;
 }
-
 .news-box-outside {
     padding: 10px;
 }
@@ -1365,45 +1368,40 @@ article {
 .news-box-ymd {
     font-size: 20px;
 }
-
 .news-box-inside {
     /*background-color: #b8edc6;*/
-    padding: 0 50px 30px 50px;
+    padding: 10px 50px 30px 50px;
     display: flex;
     justify-content: space-between;
 }
-
 .manypictures {
     flex-direction: column;
 }
-
 .news-textbox {
     width: 60%;
 }
-
 .no-img {
     width: 100%;
 }
-
 .news-textbox h3 {
     font-size: 30px;
+    padding-bottom: 10px;
 }
-
 .news-textbox p {
     font-size: 18px;
 }
-
 .news-imgbox {
-    /*background-color: aliceblue;*/
-    width: 200px;
-    height: 150px;
+/*    background-color: aliceblue;*/
+    width: 220px;
+    height: 160px;
+    padding: 10px 0 0 0;
 }
 .news-imgbox img {
     width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
-
 .imgbox-pictures {
-background-color: #64C37C;
     width: 100%;
     height: auto;
     margin: 10px 0;
@@ -1416,6 +1414,62 @@ background-color: #64C37C;
     object-fit: fill;
 }
 
+@media(max-width:700px){
+.newspage-around {
+    width: 95%;
+    min-width: auto;
+}
+.news-box-ymd {
+    font-size: 20px;
+}
+.news-box-inside {
+    flex-direction: column;
+    padding: 10px 5% 30px 5%;
+}
+.manypictures {
+    flex-direction: column;
+}
+.news-textbox {
+    width: 100%;
+}
+.news-textbox h3 {
+    font-size: max(5vw, 14px);
+    padding-bottom: 10px;
+}
+.news-textbox p {
+    font-size: max(3vw, 12px);
+}
+.news-imgbox {
+/*    background-color: aliceblue;*/
+    width: 220px;
+    height: 160px;
+    padding: 10px 0 0 0;
+}
+.news-imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.imgbox-pictures {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.imgbox-pictures img {
+    margin:0 0 10px 0;
+    width: 100%;
+    max-width: 240px;
+    height: 100%;
+    object-fit: fill;
+}
+}
+@media(max-width:300px){
+.news-imgbox {
+    display: none;
+}
+}
 
 
 /*ーーーーーーーーーー　　生産者ページ　　ーーーーーーーーーー*/
