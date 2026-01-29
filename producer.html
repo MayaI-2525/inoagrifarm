@@ -33,7 +33,17 @@
         "addressCountry": "JP"
         }
     } 
- </script>
+    </script>
+    <!--Googleアナリティクス-->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BQE9BD95P"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5BQE9BD95P');
+    </script>
 </head>
 
 <body><!--ここから表示部分-->
@@ -241,12 +251,21 @@
     </div>
     <div class="footerPresents">2025 M.Ino</div>
 </footer>
-
+<button class="upscrolltop">
+    <img src="./picture/illust/新芽のアイコン.png">
+    <span></span>
+    <p>ページTOPへ</p>
+</button>
 </body>
 
 <!--jQuery読み込み-->
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
+    //ページトップに飛ぶ
+    $('.upscrolltop').click(function(){
+        $('body, html').animate({scrollTop: 0}, 500);
+    });
+
     //開く処理定義
     function openMenu(){
         $('#humbergermenu-box').css('visibility', 'visible');
