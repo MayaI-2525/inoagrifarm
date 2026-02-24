@@ -1727,7 +1727,6 @@ article {
 
 @media(max-width:700px){
 .sub-produce-top {
-    background-color: #64C37C;
     aspect-ratio: 2/1;
     width: 100%;
     height: auto;
@@ -1751,13 +1750,13 @@ article {
     padding: 10% 0;
     position: relative;
     /*文字*/
-    font-size: 4.8vw;
+    font-size: clamp(0.7rem, 4.8vw, 2rem);
     font-weight: bolder;
     text-align: center;
     line-height: 1.25;
 }
 .sub-produce-top-comment-mini {background-color: rgba(220, 220, 220, 0.5);
-    font-size: 3vw;
+    font-size: clamp(0.5rem, 3vw, 1.25rem);
     font-weight: bold;
     color: black;
     text-align: center;
