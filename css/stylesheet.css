@@ -1092,6 +1092,7 @@ main {
     /*border: 1px solid pink;*/
     max-width: 1050px;
     margin: 0 auto;
+    padding: 0 3%;
 }
 .goodsbox {
     /*background-color: #64C37C;*/
@@ -1100,7 +1101,7 @@ main {
     margin-top: 150px;
 }
 .goods-name {
-    font-size: 64px;
+    font-size: clamp(3rem, 64px, 3.4rem);
     letter-spacing: 0.15em;
     border-bottom: 1px solid black;
     line-height: 1.2;
@@ -1108,7 +1109,7 @@ main {
 }
 
 .goods-name2 {
-    font-size: 64px;
+    font-size: clamp(3rem, 64px, 3.4rem);
     text-align: center;
     letter-spacing: 0.1em;
     border-bottom: 1px solid black;
@@ -1195,19 +1196,31 @@ main {
 }
 .goods-name {
     margin: 0 auto;
-    font-size: 40px;
+    font-size: clamp(0.75rem, 34px, 4rem);
     letter-spacing: 0.15em;
     border-bottom: 1px solid black;
     line-height: 1.2;
     padding: 4% 20%;
 }
 .goods-name2 {
-    font-size: 40px;
+    font-size: clamp(0.75rem, 34px, 4rem);
     text-align: center;
     letter-spacing: 0.1em;
     border-bottom: 1px solid black;
     line-height: 1.2;
     padding: 4% 0;
+}
+.goodstime {
+    font-size: clamp(1rem, 22px, 4rem);
+}
+}
+
+@media(max-width: 460px){
+.goods-name, .goods-name2, .goods-name-right{
+    padding: 4% 0;
+    /*文字*/
+    text-align: center;
+    font-size: 2rem;
 }
 }
 
